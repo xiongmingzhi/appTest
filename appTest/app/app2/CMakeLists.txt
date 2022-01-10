@@ -1,0 +1,5 @@
+project(app2)
+add_library(${PROJECT_NAME} App2.cpp)
+add_library(lib::app2 ALIAS ${PROJECT_NAME})
+target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR})
+target_link_libraries(${PROJECT_NAME} lib::public2)
